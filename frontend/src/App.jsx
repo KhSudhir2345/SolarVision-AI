@@ -15,7 +15,7 @@ const SolarDashboard = () => {
   const fileInputRef = useRef(null);
   const pollInterval = useRef(null);
 
-  const API_BASE = 'http://localhost:5000/api';
+  const API_BASE = 'https://solarvision-ai.onrender.com/predict/api';
 
   // Real-time status polling
   const pollAnalysisStatus = useCallback(async (sessionId) => {
