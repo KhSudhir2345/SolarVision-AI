@@ -1,0 +1,34 @@
+{
+  "approach": "Physics-Informed Machine Learning",
+  "models": [
+    "Random Forest",
+    "XGBoost/GradientBoosting"
+  ],
+  "loss_categories": [
+    "cloud_loss",
+    "temperature_loss",
+    "soiling_loss",
+    "shading_loss",
+    "system_loss",
+    "spectral_loss",
+    "degradation_loss",
+    "reflection_loss",
+    "curtailment_loss",
+    "other_loss"
+  ],
+  "feature_count": 63,
+  "physics_constraints": [
+    "Clear sky irradiance modeling",
+    "Solar geometry calculations",
+    "Temperature coefficient applications",
+    "String current mismatch analysis"
+  ],
+  "validation": "Time-series cross-validation",
+  "assumptions": [
+    "Linear temperature coefficient: -0.4%/\u00b0C",
+    "NOCT-based cell temperature estimation",
+    "Clean/dirty reference cell soiling detection",
+    "Single-axis tracking geometry",
+    "Spanish climate conditions (38\u00b0N, 1\u00b0W)"
+  ]
+}
