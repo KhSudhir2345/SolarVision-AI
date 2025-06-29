@@ -1,0 +1,12 @@
+Flask
+flask-cors
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+scikit-learn
+scipy
+joblib
+gunicorn
+Werkzeug
