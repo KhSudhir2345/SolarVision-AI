@@ -36,13 +36,7 @@ logger = logging.getLogger(__name__)
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app, resources={
-    r"/api/*": {
-        "origins": ["http://localhost:3000", "http://localhost:5173", "*"],
-        "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-        "allow_headers": ["Content-Type", "Authorization"]
-    }
-})
+CORS(app, origins="*")
 
 # Configuration
 app.config['MAX_CONTENT_LENGTH'] = 200 * 1024 * 1024  # 200MB max file size
@@ -598,4 +592,5 @@ if __name__ == '__main__':
     print("  GET  /api/config           - Get API configuration")
     print("="*80)
     
-    app.run(host='0.0.0.0', port=5000, debug=True, threaded=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port, debug=True, threaded=True)
